@@ -6,6 +6,7 @@ class MnistDataLoader(BaseDataLoader):
     """
     MNIST data loading demo using BaseDataLoader
     """
+
     def __init__(self, data_dir, batch_size, shuffle, validation_split, num_workers, training=True):
         trsfm = transforms.Compose([
             transforms.ToTensor(),

@@ -40,7 +40,8 @@ def main(config, resume):
                       data_loader=data_loader,
                       valid_data_loader=valid_data_loader,
                       lr_scheduler=lr_scheduler,
-                      train_logger=train_logger)
+                      train_logger=train_logger,
+                      **config['trainer_args'])
 
     trainer.train()
 

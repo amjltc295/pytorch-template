@@ -11,6 +11,7 @@ class Trainer(BaseTrainer):
     Note:
         Inherited from BaseTrainer.
     """
+
     def __init__(self, model, loss, metrics, optimizer, resume, config,
                  data_loader, valid_data_loader=None, lr_scheduler=None, train_logger=None):
         super(Trainer, self).__init__(model, loss, metrics, optimizer, resume, config, train_logger)
