@@ -29,13 +29,10 @@ def main(config, resume):
     print(model)
 
     # setup instances of losses
-    losses = {
-        entry['type']: (
-            getattr(module_loss, entry['type'])(**entry['args']),
-            entry['weight']
-        )
+    losses = [
+        getattr(module_loss, entry['type'])(**entry['args'])
         for entry in config['losses']
-    }
+    ]
 
     # set up instances of metrics
     metrics = [
